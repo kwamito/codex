@@ -1,0 +1,44 @@
+{% extends 'logs/base.html' %}
+{% load crispy_forms_tags %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'logs/css/login.css' %}">
+{% endblock %}
+{% block body %}
+<div class="jumbotron jumbotron-fluid" style="padding-top: 70px;">
+    <div class="container" id="boxo">
+      <div class="jumbo-img">
+      <img id="jumbo-img" src="{% static 'logs/images/login.svg' %}" alt="">
+      </div>
+      <h1 class="display-4" id="jumbo-text">Secure Login</h1>
+      <p class="lead"></p>
+    </div>
+</div>
+
+
+<div class="container">
+<div class="marg">
+<form action="" method="POST" id="login-form">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <center><button class="ui secondary button" id="buut" style="margin-top: 40px;">Submit</button>
+        <div class="content" style="margin-top: 20px;">
+            <div class="parent">
+                
+            </div>
+              <div>
+            <small class="text-muted">
+                Need an account? <a class="ml-2" href="{% url 'signup' %}">Sign Up</a>
+            </small>
+            </div>
+        </div>
+    </center>
+</form>
+</div>
+</div>
+{% endblock %}
+{% block main %}
+{% endblock %}
+{% block js %}
+<script src="{% static 'logs/js/login.js' %}"></script>
+{% endblock %}

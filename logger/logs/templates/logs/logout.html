@@ -1,0 +1,17 @@
+{% extends 'logs/base.html' %}
+{% load crispy_forms_tags %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'logs/css/logout.css' %}">
+{% endblock %}
+{% block body %}
+<div class="container">
+    <center style="margin-top: 100px; padding: 20px;">
+    <h1 style="margin-bottom: 20px;">You have been logged out</h1>
+    <h4 style="margin-bottom: 20px;">See you soon!😀</h4>
+    <small class="text-muted">
+        <a class="btn btn-outline-primary" id="bb" href="{% url 'login' %}">Login</a>
+    </small>
+    </center>
+</div>
+{% endblock %}

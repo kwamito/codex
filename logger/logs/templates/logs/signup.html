@@ -1,0 +1,25 @@
+{% extends 'logs/base.html' %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'logs/css/signup.css' %}">
+{% endblock %}
+{% load crispy_forms_tags %}
+{% block body %}
+<div class="container">
+    <div class="marg">
+    <form action="" method="post" style="margin-top: 120px;" id="signup-form">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <center>
+            <div class="parent">
+                
+            </div>
+            <button class="btn btn-outline-primary" id="buut">Submit</button>
+        </center>
+    </form>
+    </div>
+</div>
+{% endblock %}
+{% block js %}
+<script src="{% static 'logs/js/signup.js' %}"></script>
+{% endblock %}

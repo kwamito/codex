@@ -1,0 +1,64 @@
+body{
+    background-color: #363B41;
+    background-image: url(../images/undraw_Login_v483\ \(1\).svg);
+    background-repeat: no-repeat;
+}
+input:focus
+input:focus{
+    outline: none;
+}
+
+#signup-form{
+    width: 50%;
+    padding: 60px;
+    background-color: #2B3535;
+    width: 400px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 6px 4px 6px 4px #2F2E41;
+}
+label{
+    color: white;
+}
+
+#sc{
+    color: white;
+}
+#links{
+     color: white;
+ }
+ .nav-item{
+     color: white;
+ }
+#signup-form input{
+    border: none none auto none;
+    border-radius: 7px;
+}
+
+#signup-form input:focus{
+    outline: none;
+}
+
+#nav{
+    background-color: rgb(25, 26, 29);
+    color: white;
+}
+.marg{
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 120px;
+}
+#hint_id_password1{
+    display: none;
+}
+@media screen and (max-width:500px){
+    #signup-form{
+        width: 350px;
+    }
+    #jumbo-text{
+        font-size: x-large;
+    }
+    body{
+        background-size: contain;
+    }
+}

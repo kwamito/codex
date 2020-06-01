@@ -1,0 +1,95 @@
+.text-muted{
+    margin-top: 110px;
+}
+
+.marg{
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 120px;
+}
+
+label{
+    font-weight: bold;
+}
+
+#login-form{
+    width: 50%;
+    padding: 60px;
+    background-color: #27282B;
+    width: 400px;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: 200px;
+}
+
+input{
+    border: none none auto none;
+    width: auto;
+}
+
+#nav{
+    background-color: rgb(21, 101, 192);
+}
+.jumbotron{
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 30px 20px;
+    background-size: contain;
+    background-color: rgb(21, 101, 192);
+    width: 100%;
+}
+
+#boxo{
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    display: grid;
+}
+
+#jumbo-text{
+    grid-column: 1/2;
+    grid-row: 1;
+}
+
+label{
+    color: white;
+}
+
+.jumbo-img{
+    grid-column: 6/9;
+}
+
+.jumbo-img img{
+    width: 110%;
+    height: 100px;
+}
+
+#buut{
+    background-color: #0D0616;
+}
+
+#login-form input{
+    box-shadow: 1px 1px 1px 1px rgb(102, 99, 99);
+}
+
+@media screen and (max-width:500px){
+    #login-form{
+        width: 100%;
+        
+    }
+    #jumbo-text{
+        font-size: x-large;
+    }
+    #login-form input{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:900px){
+    .jumbo-img img{
+        width: 160%;
+        height: 180px;
+    }
+    input{
+        width: 300px;
+    }
+}

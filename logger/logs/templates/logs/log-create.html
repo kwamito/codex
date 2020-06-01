@@ -1,0 +1,17 @@
+{% extends 'logs/base.html' %}
+{% load crispy_forms_tags %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'logs/css/log-create.css' %}">
+{% endblock %}
+{% block body %}
+<div class="container">
+    <form action="" method="post" style="margin-top: 120px;">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <center>
+            <button class="btn btn-outline-success">Enter</button>
+        </center>
+    </form>
+</div>
+{% endblock %}

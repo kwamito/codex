@@ -1,0 +1,23 @@
+{% extends 'logs/base.html' %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'logs/css/project-create.css' %}">
+{% endblock %}
+{% load crispy_forms_tags %}
+{% block body %}
+<div class="container">
+    <div class="marg">
+        <center><h1 id="title">Create a new project</h1></center>
+    <form action="" method="post" id="signup-form">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <center>
+            <button class="btn btn-outline-success" id="sub-but">Create project</button>
+        </center>
+    </form>
+    </div>
+</div>
+{% endblock %}
+{% block js %}
+<script src="{% static 'logs/js/project-create.js' %}"></script>
+{% endblock %}

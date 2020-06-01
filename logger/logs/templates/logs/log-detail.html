@@ -1,0 +1,46 @@
+{% extends 'logs/base.html' %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'logs/css/log-detail.css' %}">
+{% endblock %}
+{% block body %}
+
+<div class="container">
+    <div class="con" style="padding-top: 20px; margin-top: 40px;">
+        <h3 class="user">{{ log.user }}</h3>
+        <h2 class="title" style="text-align: center;"style="text-align: center;">{{ log.title }}</h2>
+        {% if log.image %}
+        <center><div class="log-image">
+        <img src="{{ log.image.url }}" alt="">
+        </div></center>
+        {% else %}
+        {% endif %}
+        <div style="background-color: #EFF0F1; padding: 20px;"><pre>{{ log.code }}}</pre></div>
+        <div class="date"><strong>{{ log.date_created }}</strong></div>
+        <div class="replys">
+            {% for i in comment %}
+            <div class="ans">
+                <h3>{{ i.user }} replied</h3>
+                {{ i }}
+                <div class="time">
+                <small>{{ i.date_sent }}</small>
+                <div class="reply-code"><pre>{{ i.code }}</pre></div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <form action="" method="POST">
+            {% csrf_token %}
+        <div class="content">
+        <!--<label for="reply">Reply</label>-->
+        <textarea placeholder="Reply" style="margin-bottom: 10px;" name="comm" id="reply" cols="30" rows="10"></textarea>
+        <!--<label for="code">Code</label>-->
+        <textarea placeholder="Code" name="code" id="code" cols="10" rows="10"></textarea>
+        <div class="button-grid">
+        <center><button class="btn btn-outline-success"><i class="paper plane outline icon"></i>Submit</button></center>
+        </div>
+        </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

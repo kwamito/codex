@@ -1,0 +1,41 @@
+{% extends 'api/base.html' %}
+{% block content %}
+<div>
+    <button id="apireq">click me</button>
+</div>
+<div id="jsonresp" style="margin-top: 100px">
+    <p><label> First name :</label> <span id="first_name" style="transition: 2s;"></span></p>
+    <p><label> Last name :</label> <img id="logo" src=""></p>
+    <p><label> age :</label> <span id="age"></span></p>
+    <p><label> gender : </label> <span id="gender"></span></p>
+</div>
+<!--<script type="text/javascript"> 
+ var request = new XMLHttpRequest()
+
+request.open('GET', 'http://127.0.0.1:8000/app/restaurant/list/', true)
+request.onload = function() {
+  // Begin accessing JSON data here
+  
+  if (request.status >= 200 && request.status < 400) {
+    var data = JSON.parse(this.response);
+    console.log(data[0].name);
+  document.getElementById("apireq").addEventListener("click", function(){
+  document.getElementById("first_name").innerHTML = data[0].name;
+  document.getElementById("logo").src = data[0].logo;
+  document.getElementById("logo").style.height='70px';
+  document.getElementById("logo").style.width='70px';
+
+});
+    }
+  else {
+    console.log('error');
+  }
+ 
+  }
+
+
+request.send()
+</script>-->
+{% endblock %}
+{% block javascript %}
+{% endblock %}

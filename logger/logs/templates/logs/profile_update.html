@@ -1,0 +1,20 @@
+{% extends 'logs/base.html' %}
+{% load crispy_forms_tags %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'logs/css/profile-update.css' %}">
+{% endblock %}
+{% block body %}
+<div class="container">
+    
+    <form action="" id="form">
+        <div class="img">
+        <center><img class="ui small circular image" src="{{ request.user.profile.avatar.url }}"></center>
+        <h3>{{ request.user }}</h3>
+        </div>
+        {{ u_form|crispy }}
+        {{ p_form|crispy }}
+        <button class="btn btn-outline-primary sm">Submit</button>
+    </form>
+</div>
+{% endblock %}

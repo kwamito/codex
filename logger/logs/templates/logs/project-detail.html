@@ -1,0 +1,22 @@
+{% extends 'logs/base.html' %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'logs/css/project_detail.css' %}">
+{% endblock %}
+{% block body %}
+<div class="container">
+<div class="ui segment" style="margin-top: 80px;">
+    <h3 style="text-align: center;">{{ object.project_name }} by <a href=""></a> {{ object.user }} </h3>
+    <center><a class="positive ui button" href="{% url 'create-file' %}" id="new">Add a new file</a></center>
+    <p style="text-align: center; margin-top: 10px;">{{ object.language }} project</p>
+    <div class="bulk-files">
+      {% for i in files %}
+    <div class="file-list">
+      <a href="http://127.0.0.1:8000/{{ i }}">{{ i }}</a>
+      <p>{{ i.description }}</p>
+    </div> 
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

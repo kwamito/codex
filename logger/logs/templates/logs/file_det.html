@@ -1,0 +1,13 @@
+{% extends 'logs/base.html' %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'logs/css/file-detail.css' %}">
+{% endblock %}
+{% block body %}
+<div class="container">
+<div class="ui segment" style="margin-top: 80px;">
+    <h3 style="text-align: center;">{{ name }}</h3>
+    <pre style="margin-left: 100px;">{{ file }}</pre>
+  </div>
+</div>
+{% endblock %}

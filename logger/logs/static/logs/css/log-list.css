@@ -1,0 +1,15 @@
+.col{
+    padding: 30px;
+    background-color: darkslategrey;
+    border-radius: 10px;
+}
+#nav{
+    background-color: black;
+}
+
+#links{
+    color: whitesmoke;
+}
+#sc{
+    color: whitesmoke;
+}

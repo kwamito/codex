@@ -1,0 +1,28 @@
+{% extends 'logs/base.html' %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'logs/css/log-list.css' %}">
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+  
+
+  
+
+    {% for i in logs %}
+    <div class="row" style="margin:0 auto;">
+    <div class="col" style="margin-top: 80px;">
+        <h3>
+         <a href="{% url 'log-detail' i.id %}"> {{ i.title }}</a>
+        </h3>
+    </div>
+ </div>
+    {% endfor %}
+ 
+</div>
+{% endblock %}
+{% block js %}
+<script src="{% static 'logs/js/home.js' %}"></script>
+{% endblock %}

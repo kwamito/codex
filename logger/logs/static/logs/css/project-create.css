@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
+
+.marg{
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+#title{
+    margin-bottom: 20px;
+    padding-bottom: 2px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#signup-form{
+    border-radius: 10px;
+    padding: 50px;
+    width: auto;
+}
+
+input{
+    width: 20%;
+}
+
+#nav{
+    background-color: rgb(43, 35, 35);
+}
+
+#links{
+    color: white;
+}
+#sc{
+    color: white;
+}
+
+#sub-but{
+    padding: 7px;
+    margin-top: 13px;
+}
+
+@media screen and (max-width:600px){
+    #signup-form{
+        padding: 12px;
+        width: 90%;
+    }
+}

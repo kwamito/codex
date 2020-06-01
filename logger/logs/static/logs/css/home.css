@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,700&family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+body{
+    background-color: #ffffff;
+    font-family: 'Questrial', sans-serif;
+}
+#nav{
+    background-color: rgb(246, 133, 14);
+}
+.jumbotron{
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 30px 20px;
+    background-size: contain;
+    background-color: rgb(246, 133, 14);
+    width: 100%;
+}
+
+#boxo{
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    display: grid;
+}
+
+.jumbo-text{
+    grid-column: 1/2;
+    grid-row: 1;
+}
+
+
+.jumbo-img{
+    grid-column: 6/9;
+}
+
+.jumbo-img img{
+    width: 140%;
+}
+hr{
+    width: 500px;
+}
+@media screen and (max-width: 600px){
+    hr{
+        width: 200px;
+    }
+}
+/* large tablets and laptops */
+@media screen and (min-width:800px){
+    .jumbo-img img{
+        width: 120%;
+    }
+    .jumbo-img {
+        grid-column: 7/9;
+    }
+}

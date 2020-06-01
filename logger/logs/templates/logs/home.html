@@ -1,0 +1,69 @@
+{% extends 'logs/base.html' %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'logs/css/home.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="jumbotron jumbotron-fluid" style="padding-top: 70px;">
+    <div class="container" id="boxo">
+      <div class="jumbo-img">
+      <img id="jumbo-img" src="{% static 'logs/images/web.svg' %}" alt="">
+      </div>
+      <div class="jumbo-text">
+      <h1 class="display-4">Your Projects</h1>
+      </div>
+    </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="ui cards" style="margin: 0 auto;">
+    <div class="card">
+      <div class="content">
+        <div class="header">Add a new project</div>
+        <div class="description">
+          Logs
+        </div>
+      </div>
+      <div class="ui bottom attached button">
+        <i class="add icon"></i>
+       <a href="{% url 'project-create' %}"> Add Project</a>
+      </div>
+    </div>
+  </div>
+  </div>
+  <hr style="background-color: royalblue;">
+
+
+  <div class="row" style="margin:0 auto;">
+
+    {% for i in logs %}
+    <div class="col" style="padding: 20px;">
+      <div class="ui raised card">
+        <div class="content">
+          <div class="header">{{ i }}</div>
+          <div class="meta">
+            <span class="category">{{ i.language }}</span>
+          </div>
+          <div class="description">
+            <p></p>
+          </div>
+        </div>
+        <div class="extra content">
+          <div class="right floated author">
+            {{request.user}}
+          </div>
+          
+          <a class="ui button" href="{% url 'project-detail' i.id %}">Open</a>
+          
+        </div>
+      </div>
+
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+{% block js %}
+<script src="{% static 'logs/js/home.js' %}"></script>
+{% endblock %}
