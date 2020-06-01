@@ -1,0 +1,61 @@
+body{
+    background-image: url('../images/undraw_profile_6l1l.svg');
+    background-repeat: no-repeat;
+    background-color: #191A1D;
+}
+
+
+.container{
+    margin-top: 100px;
+}
+form{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#nav{
+    background-color: black;
+}
+
+
+#links{
+    color: whitesmoke;
+}
+#sc{
+    color: whitesmoke;
+}
+
+.img{
+    margin: 0 auto;
+}
+
+.img h3{
+    text-align: center;
+}
+
+#form{
+    width: 80%;
+    margin: 0 auto;
+    background-color: #31323B;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 5px #121720;
+}
+
+label{
+    color: whitesmoke;
+}
+
+#id_avatar button{
+    background-color: ivory;
+}
+
+@media screen and (max-width: 600px){
+    #form{
+        width: 90%;
+        box-shadow: 4px 4px 4px 5px #1a1b1b;
+    }
+    body{
+        background-color: #121212;
+    }
+}

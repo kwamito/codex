@@ -1,0 +1,80 @@
+.log-image{
+    margin: 0 auto;
+    image-orientation: flip;
+    margin-bottom: 50px;
+}
+
+.log-image img{
+    border-radius: 10px;
+    width: 90%;
+}
+
+.user{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.title{
+    text-align: center;
+}
+
+#nav{
+    background-color: dimgrey;
+}
+
+textarea{
+    border-radius: 10px;
+    width: 500px;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    margin-bottom: 100px;
+}
+.content textarea{
+    grid-column: 5;
+}
+.button-grid{
+    grid-row: 3;
+    grid-column: 5;
+    align-content: center;
+    margin-top: 20px;
+}
+.button-grid button{
+    padding: 10px;
+}
+
+
+.date{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.replys{
+    margin-bottom: 90px;
+}
+
+.ans{
+    padding: 20px;
+    background-color: darkgray;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.reply-code{
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+@media screen and (max-width:600px){
+    textarea{
+        width: 310px;
+    }
+}
+@media screen and (min-width:1100px){
+    .log-image img{
+        width: 50%;
+    }
+}

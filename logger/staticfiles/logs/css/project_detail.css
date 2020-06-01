@@ -1,0 +1,30 @@
+#nav{
+    background-color: #27282B;
+}
+
+#links{
+    color: white;
+}
+
+#new{
+    margin: 0 auto;
+}
+#sc{
+    color: white;
+}
+
+.bulk-files{
+    margin-top: 40px;
+}
+
+.file-list{
+    padding: 10px;
+    background-color: #E4D5E3;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+.file-list p{
+    grid-column: 8/12;
+    width: fit-content;
+}
