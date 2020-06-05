@@ -24,7 +24,9 @@
                 {{ i }}
                 <div class="time">
                 <small>{{ i.date_sent }}</small>
+                {% if i.code %}
                 <div class="reply-code"><pre>{{ i.code }}</pre></div>
+                {% endif %}
                 </div>
             </div>
             {% endfor %}

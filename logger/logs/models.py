@@ -20,7 +20,7 @@ class Profile(models.Model):
 
 class Log(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    code = models.TextField()
+    code = models.TextField(blank=True)
     title = models.CharField(max_length=50)
     date_created = models.DateTimeField(auto_now_add=True)
     image = models.ImageField(blank=True,upload_to='log-images')
