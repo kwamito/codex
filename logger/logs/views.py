@@ -94,7 +94,7 @@ class ProjectDetail(DetailView, LoginRequiredMixin, UserPassesTestMixin):
 
 def project_detail(request,pk):
     users_project = Project.objects.get(id=pk)
-    project_files = Files.objects.filter(project=users_project).order_by('-date_created')
+    project_files = Files.objects.filter(project=users_project)
     return render(request,'logs/project-detail.html',{'object':users_project,'files':project_files})
 
 

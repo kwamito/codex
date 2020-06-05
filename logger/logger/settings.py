@@ -152,3 +152,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 CONTENT_TYPES = ['image', 'video']
 django_on_heroku.settings(locals())
+del DATABASES['default']['OPTIONS']['sslmode']
