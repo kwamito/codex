@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib import messages
 from django.core.paginator import Paginator
 from pygments import highlight
+import os
 from pygments.lexers import get_lexer_by_name
 from pygments.formatters import HtmlFormatter
 from pygments.lexers import PythonLexer
@@ -95,17 +96,26 @@ class ProjectDetail(DetailView, LoginRequiredMixin, UserPassesTestMixin):
 def project_detail(request,pk):
     users_project = Project.objects.get(id=pk)
     project_files = Files.objects.filter(project=users_project)
-    return render(request,'logs/project-detail.html',{'object':users_project,'files':project_files})
+    if os.environ.get('DEV_ENV'):
+        dev = True
+    else:
+        dev = False
+    return render(request,'logs/project-detail.html',{'object':users_project,'files':project_files,'dev':dev})
 
 
 def file_detail(request,name):
     #files = Filer.objects.get(file_n=name)
     filed = open('./media/files/'+name, 'r')
     op_fi = filed.read()
+    if os.environ.get('DEV_ENV'):
+        dev = True
+    else:
+        dev = False
+
     #lexer = get_lexer_by_name("python", stripall=True)
     #formatter = HtmlFormatter(linenos=True, cssclass="source")
     #result = highlight(op_fi, lexer, formatter)
-    return render(request,'logs/file_det.html',{'file':op_fi,'name':name})
+    return render(request,'logs/file_det.html',{'file':op_fi,'name':name,'dev':dev})
 
 
 
